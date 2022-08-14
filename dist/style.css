@@ -36,6 +36,10 @@ span {
   background-color: #363636;
 }
 
+.color-picker span {
+  color: white;
+}
+
 .color-picker > * {
   margin-left: 20px;
 }
