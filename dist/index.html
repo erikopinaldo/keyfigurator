@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="color-picker.min.css">
+  <link rel="stylesheet" href="../color-picker-main/index.min.css">
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -233,6 +233,16 @@
 </body>
 <!-- partial -->
   <script  src="./script.js"></script>
-
+  <script src="../color-picker-main/index.min.js"></script>
+  <script>
+    const picker = new CP(document.querySelector('input'));
+    picker.on('change', function(r, g, b, a) {
+        if (1 === a) {
+            this.source.value = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+        } else {
+            this.source.value = 'rgba(' + r + ', ' + g + ', ' + b + ', ' + a + ')';
+        }
+    });
+  </script>
 </body>
 </html>
