@@ -24,6 +24,10 @@
           <input type="text" value="#FFFFFF" class="color-picker-bg" />
         </div>
         <div>
+          <span>Case</span>
+          <input type="text" value="#46465E" class="color-picker-case" />
+        </div>
+        <div>
           <span>Keys</span>
           <input type="text" value="#FFFFFF" class="color-picker-keys" />
         </div>
@@ -243,10 +247,16 @@
 <script src="../color-picker-main/index.min.js"></script>
 <script>
   const bgPicker = new CP(document.querySelector('.color-picker-bg'));
+  const casePicker = new CP(document.querySelector('.color-picker-case'));
   const keysPicker = new CP(document.querySelector('.color-picker-keys'));
+  
   function bgOnChange(r, g, b, a) {
     this.source.value = this.color(r, g, b, a);
     document.body.style.backgroundColor = this.color(r, g, b, a);
+  }
+  function caseOnChange(r, g, b, a) {
+    this.source.value = this.color(r, g, b, a);
+    document.querySelector('.keyboard').style.borderColor = this.color(r, g, b, a);
   }
   function keysOnChange(r, g, b, a) {
     this.source.value = this.color(r, g, b, a);
@@ -254,6 +264,7 @@
     keys.forEach(key => key.style.backgroundColor = this.color(r, g, b, a));
   }
   bgPicker.on('change', bgOnChange);
+  casePicker.on('change', caseOnChange)
   keysPicker.on('change', keysOnChange)
 </script>
 </body>
