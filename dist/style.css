@@ -37,6 +37,10 @@ span {
   background-color: #363636;
 }
 
+.color-picker input {
+  border-radius: 5px;
+}
+
 .color-picker span {
   color: white;
 }
