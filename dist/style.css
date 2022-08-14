@@ -28,9 +28,13 @@ span {
 }
 
 .color-picker {
-  display: block;
+  display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.color-picker > * {
+  margin-left: 20px;
 }
 
 .keyboard {
