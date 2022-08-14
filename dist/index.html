@@ -18,9 +18,9 @@
 <body>
   <div class="container">
     <div class="content">
-      <div class="color-picker-bg">
+      <div class="color-picker">
         <span>Background</span>
-        <input type="text" value="#FFFFFF" />
+        <input type="text" value="#FFFFFF" class="color-picker-bg" />
       </div>
       <div class="keyboard">
         <div class="row numbers">
@@ -236,7 +236,7 @@
 <script  src="./script.js"></script>
 <script src="../color-picker-main/index.min.js"></script>
 <script>
-  const picker = new CP(document.querySelector('input'));
+  const picker = new CP(document.querySelector('.color-picker-bg'));
   function onChange(r, g, b, a) {
     this.source.value = this.color(r, g, b, a);
     document.body.style.backgroundColor = this.color(r, g, b, a);
