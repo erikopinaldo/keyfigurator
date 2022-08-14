@@ -27,6 +27,12 @@ span {
   justify-content: center;
 }
 
+.color-picker-bg {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .keyboard {
   width: 780px;
   height: 262px;
