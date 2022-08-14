@@ -29,8 +29,11 @@ span {
 
 .color-picker {
   display: flex;
+  align-items: center;
+  height: 70px;
   margin-top: 20px;
   margin-bottom: 20px;
+  background-color: #363636;
 }
 
 .color-picker > * {
