@@ -25,7 +25,7 @@
         </div>
         <div>
           <span>Keys</span>
-          <input type="text" value="#FFFFFF" class="color-picker-bg" />
+          <input type="text" value="#FFFFFF" class="color-picker-keys" />
         </div>
       </div>
       <div class="keyboard">
@@ -243,11 +243,18 @@
 <script src="../color-picker-main/index.min.js"></script>
 <script>
   const bgPicker = new CP(document.querySelector('.color-picker-bg'));
-  function onChange(r, g, b, a) {
+  const keysPicker = new CP(document.querySelector('.color-picker-keys'));
+  function bgOnChange(r, g, b, a) {
     this.source.value = this.color(r, g, b, a);
     document.body.style.backgroundColor = this.color(r, g, b, a);
   }
-  bgPicker.on('change', onChange);
+  function keysOnChange(r, g, b, a) {
+    this.source.value = this.color(r, g, b, a);
+    let keys = document.querySelectorAll('.key')
+    keys.forEach(key => key.style.backgroundColor = this.color(r, g, b, a));
+  }
+  bgPicker.on('change', bgOnChange);
+  keysPicker.on('change', keysOnChange)
 </script>
 </body>
 </html>
