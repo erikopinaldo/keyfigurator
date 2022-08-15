@@ -28,13 +28,18 @@ span {
 }
 
 .color-picker {
+  height: 70px;
   display: flex;
   align-items: center;
-  height: 70px;
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 5px;
   background-color: #363636;
+}
+
+.color-picker form {
+  display: flex;
+  align-items: center;
 }
 
 .color-picker input {
@@ -46,7 +51,7 @@ span {
   color: white;
 }
 
-.color-picker > * {
+.color-picker form > * {
   margin-left: 20px;
 }
 
