@@ -19,18 +19,20 @@
   <div class="container">
     <div class="content">
       <div class="color-picker">
-        <div>
-          <span>Background</span>
-          <input type="text" value="#FFFFFF" class="color-picker-bg" />
-        </div>
-        <div>
-          <span>Case</span>
-          <input type="text" value="#46465E" class="color-picker-case" />
-        </div>
-        <div>
-          <span>Keys</span>
-          <input type="text" value="#FFFFFF" class="color-picker-keys" />
-        </div>
+        <form method="post" action="/save-color">
+          <div>
+            <span>Background</span>
+            <input type="text" value="#FFFFFF" class="color-picker-bg" />
+          </div>
+          <div>
+            <span>Case</span>
+            <input type="text" value="#46465E" class="color-picker-case" />
+          </div>
+          <div>
+            <span>Keys</span>
+            <input type="text" value="#FFFFFF" class="color-picker-keys" />
+          </div>
+        </form>
       </div>
       <div class="keyboard">
         <div class="row numbers">
