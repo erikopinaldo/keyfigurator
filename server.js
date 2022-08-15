@@ -14,5 +14,5 @@ app.get('/', (req, res) => {
 })
 
 app.post('/save-color', (req, res) => {
-    console.log('Hellooooo')
+    console.log(req.body)
 })
