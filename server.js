@@ -9,3 +9,7 @@ app.listen(8000, () => console.log('Listening on port 8000'))
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/dist/index.html')
 })
+
+app.post('/save-color', (req, res) => {
+    console.log('Hellooooo')
+})
