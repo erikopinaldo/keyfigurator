@@ -12,14 +12,19 @@ body {
   font-weight: bold;
 }
 
+nav h1 {
+  margin: 30px;
+  font-size: 30px;
+}
+
 span {
   display: block;
   margin-top: -5px;
 }
 
 .container {
-  height: 100vh;
-  width: 1500px;
+  height: 80vh;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -36,7 +41,6 @@ span {
 }
 
 .color-picker {
-  height: 70px;
   flex: 1;
   margin-top: 20px;
   margin-bottom: 20px;
