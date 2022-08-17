@@ -261,7 +261,7 @@
   
   function bgOnChange(r, g, b, a) {
     this.source.value = this.color(r, g, b, a);
-    document.body.style.backgroundColor = this.color(r, g, b, a);
+    document.querySelector('.keyboard-container').style.backgroundColor = this.color(r, g, b, a);
   }
   function caseOnChange(r, g, b, a) {
     this.source.value = this.color(r, g, b, a);
