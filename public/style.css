@@ -47,6 +47,10 @@ span {
   border-radius: 5px;
 }
 
+.color-picker form {
+  margin: 50px;
+}
+
 .color-picker input {
   border: 0;
   border-radius: 5px;
@@ -63,12 +67,13 @@ span {
 
 .keyboard-container {
   flex: 2;
+  background-color: white;
 }
 
 .keyboard {
   width: 780px;
   height: 262px;
-  margin: 0px auto;
+  margin: 80px 50px 80px 50px;
   border: 20px solid #46465E;
   border-radius: 10px;
   background: #000000;
