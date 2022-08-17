@@ -48,7 +48,7 @@ span {
 }
 
 .color-picker form {
-  margin: 80px;
+  margin: 80px 50px 80px 0;
 }
 
 .color-picker input {
