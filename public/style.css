@@ -44,6 +44,7 @@ span {
   height: 400px;
   width: 300px;
   flex-grow: 5;
+  margin-top: 80px;
   overflow: auto;
   /* margin: 80px 50px 80px 0; */
   /* margin-top: 20px;
