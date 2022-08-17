@@ -85,7 +85,7 @@ span {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  background-color: white;
+  background-color: #d0d0d0;
 }
 
 .keyboard {
