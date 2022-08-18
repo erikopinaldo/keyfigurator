@@ -34,22 +34,23 @@ span {
 
 .content {
   display: flex;
+  align-items: center;
 }
 
 .content > * {
-  margin: 20px;
+  margin: 50px;
 }
 
 .color-picker {
-  height: 400px;
-  width: 300px;
+  display: flex;
+  align-items: center;
   flex-grow: 5;
-  margin-top: 80px;
+}
+
+.color-picker > * {
+  height: 500px;
+  width: 50vh;
   overflow: auto;
-  /* margin: 80px 50px 80px 0; */
-  /* margin-top: 20px;
-  margin-bottom: 20px; */
-  border-radius: 5px;
 }
 
 ::-webkit-scrollbar {
@@ -91,6 +92,7 @@ span {
 
 .keyboard-container {
   display: flex;
+  height: 500px;
   align-items: center;
   flex-grow: 1;
   background-color: #d0d0d0;
