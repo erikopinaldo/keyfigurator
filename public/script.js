@@ -8,7 +8,7 @@ Array.from(deleteBtn).forEach((element)=>{
 
 async function deleteItem(){
     const itemText = this.parentNode.childNodes[1].innerText
-    try{
+    try {
         const response = await fetch('deleteItem', {
             method: 'delete',
             headers: {'Content-Type': 'application/json'},
@@ -20,7 +20,8 @@ async function deleteItem(){
         console.log(data)
         location.reload()
 
-    }catch(err){
+    }
+    catch(err) {
         console.log(err)
     }
 }
