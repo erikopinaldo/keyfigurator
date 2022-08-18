@@ -85,6 +85,10 @@ span {
   list-style: none;
 }
 
+.saved-color {
+  margin: 20px 0 20px 0;
+}
+
 .keyboard-container {
   display: flex;
   align-items: center;
