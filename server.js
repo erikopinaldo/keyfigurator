@@ -12,6 +12,8 @@ app.use(express.static('public'))
 
 app.use(bodyParser.urlencoded({extended: true}))
 
+app.set('view engine', 'ejs')
+
 app.listen(8000, () => console.log('Listening on port 8000'))
 
 MongoClient.connect(dbConnectionString)
