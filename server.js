@@ -22,6 +22,13 @@ MongoClient.connect(dbConnectionString)
     const db = client.db('keyfigurator')
     const colorsCollection = db.collection('colors')
 
+    app.get('/', (req, res) => {
+        db.collection('quotes').find().toArray()
+        .then(/* ... */)
+        .catch(/* ... */)
+        res.render('index.ejs', {})
+    })
+    
     app.post('/save-color', (req, res) => {
         colorsCollection.insertOne(req.body)
         .then(result => {
@@ -32,6 +39,3 @@ MongoClient.connect(dbConnectionString)
 })
 .catch(error => console.error(error))
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/dist/index.html')
-})
