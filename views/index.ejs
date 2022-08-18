@@ -234,15 +234,15 @@
         <form method="post" action="/save-color">
           <div>
             <span>Background</span>
-            <input type="text" value="#d0d0d0" class="color-picker-bg" name="background-color"/>
+            <input type="text" value="#d0d0d0" class="color-picker-bg" name="backgroundColor"/>
           </div>
           <div>
             <span>Case</span>
-            <input type="text" value="#46465E" class="color-picker-case" name="case-color" />
+            <input type="text" value="#46465E" class="color-picker-case" name="caseColor" />
           </div>
           <div>
             <span>Keys</span>
-            <input type="text" value="#FFFFFF" class="color-picker-keys" name="keys-color" />
+            <input type="text" value="#FFFFFF" class="color-picker-keys" name="keysColor" />
           </div>
           <button type="submit">Save color</button>
         </form>
@@ -251,10 +251,9 @@
             <ul class="saved-colors">
                 <% for(var i = 0; i < colors.length; i++) {%>
                     <li class="saved-color">
-                      <!-- Output name from the iterated quote object -->
-                        <span><%= colors[i].name %></span>:
-                      <!-- Output quote from the iterated quote object -->
-                        <span><%= colors[i].quote %></span>
+                      <span><%= colors[i].backgroundColor %></span>
+                      <span><%= colors[i].caseColor %></span>
+                      <span><%= colors[i].keysColor %></span>
                     </li>
                 <% } %>
             </ul>

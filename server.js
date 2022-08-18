@@ -28,7 +28,7 @@ MongoClient.connect(dbConnectionString)
             console.log(results)
             res.render('index.ejs', {colors: results})
         })
-        .catch(/* ... */)
+        .catch(error => console.error(error))
         
     })
     
