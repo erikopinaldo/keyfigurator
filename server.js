@@ -23,16 +23,20 @@ MongoClient.connect(dbConnectionString)
     const colorsCollection = db.collection('colors')
 
     app.get('/', (req, res) => {
-        db.collection('quotes').find().toArray()
-        .then(/* ... */)
+        db.collection('colors').find().toArray()
+        .then(results => {
+            console.log(results)
+            res.render('index.ejs', {colors: results})
+        })
         .catch(/* ... */)
-        res.render('index.ejs', {})
+        
     })
     
     app.post('/save-color', (req, res) => {
         colorsCollection.insertOne(req.body)
         .then(result => {
             console.log(result)
+            res.redirect('/')
         })
         .catch(error => console.error(error))
     })
