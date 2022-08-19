@@ -11,6 +11,7 @@ const dbConnectionString = process.env.DB_CONNECTION_STRING
 app.use(express.static('public'))
 
 app.use(bodyParser.urlencoded({extended: true}))
+app.use(express.json())
 
 app.set('view engine', 'ejs')
 
@@ -39,6 +40,17 @@ MongoClient.connect(dbConnectionString)
             res.redirect('/')
         })
         .catch(error => console.error(error))
+    })
+
+    app.delete('/deleteItem', (req, res) => {
+        console.log('req body ', req.body)
+        colorsCollection.deleteOne({colorName: req.body.itemFromJS})
+        .then(result => {
+            console.log('Color combination Deleted')
+            res.json('Color Combination Deleted')
+        })
+        .catch(error => console.error(error))
+    
     })
 })
 .catch(error => console.error(error))
