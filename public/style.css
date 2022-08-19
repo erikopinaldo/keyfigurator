@@ -43,6 +43,7 @@ span {
 
 .color-picker {
   display: flex;
+  width: 300px;
   align-items: center;
   flex-grow: 5;
 }
