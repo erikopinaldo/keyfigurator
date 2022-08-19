@@ -83,6 +83,17 @@ span {
   margin: 20px 0 20px 0;
 }
 
+.submitColorName {
+  margin: 20px;
+  background-color: #d0d0d0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.submitColorName > *{
+  margin-bottom: 10px;
+}
+
 .saved-colors {
   list-style: none;
 }
