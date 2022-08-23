@@ -1,15 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const todosController = require('../controllers/todos')
+const colorsController = require('../controllers/colors')
 
-router.get('/', todosController.getTodos)
+router.get('/', colorsController.getTodos)
 
-router.post('/createTodo', todosController.createTodo)
+router.post('/createColor', colorsController.createColor)
 
-router.put('/markComplete', todosController.markComplete)
-
-router.put('/markIncomplete', todosController.markIncomplete)
-
-router.delete('/deleteTodo', todosController.deleteTodo)
+router.delete('/deleteColor', colorsController.deleteColor)
 
 module.exports = router
