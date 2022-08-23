@@ -6,6 +6,6 @@ router.get('/', colorsController.getColors)
 
 router.post('/saveColor', colorsController.createColor)
 
-router.delete('/deleteItem', colorsController.deleteColor)
+router.delete('/deleteColor', colorsController.deleteColor)
 
 module.exports = router
