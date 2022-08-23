@@ -1,4 +1,4 @@
-const Todo = require('../models/Todo')
+const Color = require('../models/Colors')
 
 module.exports = {
     getTodos: async (req,res)=>{
