@@ -4,8 +4,8 @@ const colorsController = require('../controllers/colors')
 
 router.get('/', colorsController.getColors)
 
-router.post('/createColor', colorsController.createColor)
+router.post('/save-color', colorsController.createColor)
 
-router.delete('/deleteColor', colorsController.deleteColor)
+router.delete('/deleteItem', colorsController.deleteColor)
 
 module.exports = router
