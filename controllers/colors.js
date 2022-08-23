@@ -1,51 +1,29 @@
 const Color = require('../models/Colors')
 
 module.exports = {
-    getTodos: async (req,res)=>{
+    getColors: async (req,res)=>{
         try{
-            const todoItems = await Todo.find()
-            const itemsLeft = await Todo.countDocuments({completed: false})
-            res.render('todos.ejs', {todos: todoItems, left: itemsLeft})
+            const todoItems = await Color.find()
+            const itemsLeft = await Color.countDocuments()
+            res.render('index.ejs', {colors: results})
         }catch(err){
             console.log(err)
         }
     },
-    createTodo: async (req, res)=>{
+    createColor: async (req, res)=>{
         try{
-            await Todo.create({todo: req.body.todoItem, completed: false})
-            console.log('Todo has been added!')
-            res.redirect('/todos')
+            await Color.create(req.body)
+            console.log('Color has been added!')
+            res.redirect('/')
         }catch(err){
             console.log(err)
         }
     },
-    markComplete: async (req, res)=>{
+    deleteColor: async (req, res)=>{
+        console.log('req body ', req.body)
         try{
-            await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
-                completed: true
-            })
-            console.log('Marked Complete')
-            res.json('Marked Complete')
-        }catch(err){
-            console.log(err)
-        }
-    },
-    markIncomplete: async (req, res)=>{
-        try{
-            await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
-                completed: false
-            })
-            console.log('Marked Incomplete')
-            res.json('Marked Incomplete')
-        }catch(err){
-            console.log(err)
-        }
-    },
-    deleteTodo: async (req, res)=>{
-        console.log(req.body.todoIdFromJSFile)
-        try{
-            await Todo.findOneAndDelete({_id:req.body.todoIdFromJSFile})
-            console.log('Deleted Todo')
+            await Color.findOneAndDelete({colorName: req.body.itemFromJS})
+            console.log('Deleted Color')
             res.json('Deleted It')
         }catch(err){
             console.log(err)
