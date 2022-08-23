@@ -3,9 +3,8 @@ const Color = require('../models/Colors')
 module.exports = {
     getColors: async (req,res)=>{
         try{
-            const todoItems = await Color.find()
-            const itemsLeft = await Color.countDocuments()
-            res.render('index.ejs', {colors: results})
+            const colorItems = await Color.find()
+            res.render('index.ejs', {colors: colorItems})
         }catch(err){
             console.log(err)
         }
