@@ -99,8 +99,15 @@ span {
   padding: 0;
 }
 
-.saved-color {
+.saved-color > section {
   margin: 20px 0 20px 0;
+  display: flex;
+}
+
+.saved-color > section span {
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 2%;
 }
 
 .deleteBtn {
