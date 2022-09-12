@@ -7,15 +7,16 @@ Array.from(deleteBtn).forEach((element)=>{
 })
 
 async function deleteColor() {
-    console.log(this.parentNode.parentNode.childNodes)
+    console.log(this.parentNode.parentNode.parentNode.dataset.id)
+    const itemID = this.parentNode.parentNode.parentNode.dataset.id
     const itemText = this.parentNode.parentNode.parentNode.childNodes[1].innerText
-    console.log(itemText)
+    console.log(itemID)
     try {
         const response = await fetch('deleteColor', {
             method: 'delete',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-              'itemFromJS': itemText
+              'itemFromJS': itemID
             })
           })
         const data = await response.json()

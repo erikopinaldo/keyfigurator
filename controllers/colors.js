@@ -29,7 +29,7 @@ module.exports = {
     deleteColor: async (req, res)=>{
         console.log('req body ', req.body)
         try{
-            await Color.findOneAndDelete({colorName: req.body.itemFromJS})
+            await Color.findOneAndDelete({_id: req.body.itemFromJS})
             console.log('Deleted Color')
             res.json('Deleted It')
         }catch(err){
