@@ -100,21 +100,16 @@ span {
 }
 
 .saved-color > section {
-  margin: 20px 0 20px 0;
   display: flex;
-}
-
-.saved-color > section span {
   justify-content: space-around;
   align-items: center;
-  margin-left: 2%;
 }
 
-.deleteBtn {
+/* .button {
   border-style: none;
   border-radius: 5px;
   background-color: #d0d0d0;
-}
+} */
 
 .keyboard-container {
   display: flex;
