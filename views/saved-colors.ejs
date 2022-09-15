@@ -20,9 +20,8 @@
   <nav>
     <section>
       <h1>keyfigurator</h1>
-      <section class="login-signup-links">
-        <a href="/login"> Login</a>
-        <a href="/signup"> Signup</a>
+      <section>
+        <a href="/logout"> Log out</a>
       </section>
     </section>
   </nav>
@@ -240,7 +239,7 @@
       <div class="color-picker">
         <div>
             <h2>Configurator</h2>
-            <form method="post" action="/saveColor">
+            <form method="post" action="/saved-colors/saveColor">
                 <div>
                   <span>Background</span>
                   <input type="text" value="#d0d0d0" class="color-picker-bg" name="backgroundColor"/>
@@ -253,7 +252,28 @@
                   <span>Keys</span>
                   <input type="text" value="#FFFFFF" class="color-picker-keys" name="keysColor" />
                 </div>
+                <div class="submitColorName">
+                  <span>Color combination name</span>
+                  <input type="text" placeholder="Enter name here" class="color-picker-name" name="colorName" />
+                  <button type="submit" class="button">Save color</button>
+                </div>
               </form>
+              <div>
+                  <h3>Saved Colors</h3>
+                  <ul class="saved-colors">
+                      <% for(var i = 0; i < colors.length; i++) {%>
+                          <li class="saved-color" data-id="<%=colors[i]._id%>">
+                            <h4><%= colors[i].colorName %></h4>
+                            <section>
+                              <span><%= colors[i].backgroundColor %></span>
+                              <span><%= colors[i].caseColor %></span>
+                              <span><%= colors[i].keysColor %></span>
+                              <span><button type="button" class="deleteBtn">Delete</button></span>
+                            </section>
+                          </li>
+                      <% } %>
+                  </ul>
+              </div>
         </div>
       </div>
     </div>

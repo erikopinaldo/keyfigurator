@@ -10,7 +10,7 @@ async function deleteColor() {
     const itemID = this.parentNode.parentNode.parentNode.dataset.id
     console.log(itemID)
     try {
-        const response = await fetch('deleteColor', {
+        const response = await fetch('saved-colors/deleteColor', {
             method: 'delete',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
