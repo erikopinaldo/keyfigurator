@@ -12,9 +12,24 @@ body {
   font-weight: bold;
 }
 
-nav h1 {
+nav section {
   margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav section h1 {
   font-size: 30px;
+}
+
+.login-signup-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-signup-links a {
+  margin-right: 10%;
 }
 
 span {
