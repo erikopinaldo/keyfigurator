@@ -247,28 +247,7 @@
                   <span>Keys</span>
                   <input type="text" value="#FFFFFF" class="color-picker-keys" name="keysColor" />
                 </div>
-                <div class="submitColorName">
-                  <span>Color combination name</span>
-                  <input type="text" placeholder="Enter name here" class="color-picker-name" name="colorName" />
-                  <button type="submit" class="button">Save color</button>
-                </div>
               </form>
-              <div>
-                  <h3>Saved Colors</h3>
-                  <ul class="saved-colors">
-                      <% for(var i = 0; i < colors.length; i++) {%>
-                          <li class="saved-color" data-id="<%=colors[i]._id%>">
-                            <h4><%= colors[i].colorName %></h4>
-                            <section>
-                              <span><%= colors[i].backgroundColor %></span>
-                              <span><%= colors[i].caseColor %></span>
-                              <span><%= colors[i].keysColor %></span>
-                              <span><button type="button" class="button">Delete</button></span>
-                            </section>
-                          </li>
-                      <% } %>
-                  </ul>
-              </div>
         </div>
       </div>
     </div>
