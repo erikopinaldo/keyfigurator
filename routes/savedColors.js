@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const colorsController = require('../controllers/colors')
+const savedColorsController = require('../controllers/savedColors')
 
-router.get('/', colorsController.getColors)
+router.get('/', savedColorsController.getColors)
 
-router.post('/saveColor', colorsController.createColor)
+router.post('/saveColor', savedColorsController.createColor)
 
-router.delete('/deleteColor', colorsController.deleteColor)
+router.delete('/deleteColor', savedColorsController.deleteColor)
 
 module.exports = router
