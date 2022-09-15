@@ -16,6 +16,10 @@ const ColorsSchema = new mongoose.Schema({
     colorName: {
         type: String,
         required: true,
+    },
+    userId: {
+        type: String,
+        required: true
     }
 })
 
