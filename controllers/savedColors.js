@@ -18,7 +18,8 @@ module.exports = {
                     backgroundColor: req.body.backgroundColor, 
                     caseColor: req.body.caseColor, 
                     keysColor: req.body.keysColor, 
-                    colorName: req.body.colorName
+                    colorName: req.body.colorName,
+                    userId: req.user.id
                 })
             console.log('Color has been added!')
             res.redirect('/')
