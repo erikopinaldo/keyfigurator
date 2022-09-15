@@ -5,7 +5,7 @@ module.exports = {
         try{
             const colorItems = await Color.find()
             console.log(colorItems)
-            res.render('index.ejs', {colors: colorItems})
+            res.render('saved-colors.ejs', {colors: colorItems})
         }catch(err){
             console.log(err)
         }
