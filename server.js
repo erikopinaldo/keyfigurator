@@ -2,9 +2,18 @@ require('dotenv').config()
 
 const express = require('express')
 const app = express()
+const mongoose = require('mongoose')
+const passport = require('passport')
+const session = require('express-session')
+const MongoStore = require('connect-mongo')(session)
+const flash = require('express-flash')
+const logger = require('morgan')
 const connectDB = require('./config/database')
 const colorsRoutes = require('./routes/colors')
 const savedColorsRoutes = require('./routes/savedColors')
+
+// Passport config
+require('./config/passport')(passport)
 
 connectDB()
 
