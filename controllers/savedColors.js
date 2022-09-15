@@ -22,7 +22,7 @@ module.exports = {
                     userId: req.user.id
                 })
             console.log('Color has been added!')
-            res.redirect('/')
+            res.redirect('/saved-colors')
         }catch(err){
             console.log(err)
         }
