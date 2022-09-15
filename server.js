@@ -37,6 +37,8 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
+app.use(flash())
+
 app.use('/', colorsRoutes)
 app.use('/saved-colors', savedColorsRoutes)
  
