@@ -3,7 +3,7 @@ const Color = require('../models/Colors')
 module.exports = {
     getColors: async (req,res)=>{
         try{
-            const colorItems = await Color.find()
+            const colorItems = await Color.find({ userId: req.user.id })
             console.log(colorItems)
             res.render('saved-colors.ejs', {colors: colorItems})
         }catch(err){
