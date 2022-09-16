@@ -73,6 +73,10 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 
+ul {
+  padding: 0;
+}
+
 a {
   background-color: transparent;
 }
