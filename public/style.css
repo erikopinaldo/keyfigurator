@@ -12,6 +12,10 @@ body {
   font-weight: bold;
 }
 
+header {
+  margin: 0 1.5% 0 1.5%;
+}
+
 nav section {
   margin: 30px;
   display: flex;
@@ -26,10 +30,14 @@ nav section h1 {
 .login-signup-links {
   display: flex;
   justify-content: space-between;
+  list-style-type: none;
 }
 
-.login-signup-links a {
+.login-signup-links li {
   margin-right: 10%;
+}
+
+.login-signup-links li a {
   text-decoration: none;
 }
 
