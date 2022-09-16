@@ -30,6 +30,7 @@ nav section h1 {
 
 .login-signup-links a {
   margin-right: 10%;
+  text-decoration: none;
 }
 
 span {
