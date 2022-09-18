@@ -265,9 +265,9 @@
                           <li class="saved-color" data-id="<%=colors[i]._id%>">
                             <h4><%= colors[i].colorName %></h4>
                             <section>
-                              <span><%= colors[i].backgroundColor %></span>
-                              <span><%= colors[i].caseColor %></span>
-                              <span><%= colors[i].keysColor %></span>
+                              <span id="bg-color"><%= colors[i].backgroundColor %></span>
+                              <span id="case-color"><%= colors[i].caseColor %></span>
+                              <span id="keys-color"><%= colors[i].keysColor %></span>
                               <span><button type="button" class="deleteBtn">Delete</button></span>
                             </section>
                           </li>
