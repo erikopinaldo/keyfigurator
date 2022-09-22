@@ -27,7 +27,9 @@ function onSuccess(data) {
     ul.appendChild(li)
 
     li.addEventListener('click', selectColor)
-    li.childNodes[3].childNodes[7].childNodes[0].addEventListener('click', deleteColor)  
+    li.childNodes[3].childNodes[7].childNodes[0].addEventListener('click', deleteColor)
+    
+    document.getElementsByClassName('color-picker-name').colorName.value = ''
 }
 
 function onError(data) {
