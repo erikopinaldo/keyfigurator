@@ -11,7 +11,7 @@ function showMessage(data) {
 }
 
 function onSuccess(data) {
-    console.log('onSuccess called!');
+    console.log(data);
 }
 
 function onError(data) {
@@ -48,7 +48,7 @@ function onSubmit(event) {
     const { currentTarget } = event;
     console.log(currentTarget)
     sendForm(currentTarget)
-        .then(response => console.log(response))
+        .then(response => response.json())
         .then(data => onSuccess(data, currentTarget))
         .catch(onError);
 }
