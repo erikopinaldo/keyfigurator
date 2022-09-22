@@ -13,7 +13,7 @@ module.exports = {
     createColor: async (req, res)=>{
         try{
             console.log(req.body)
-            await Color.create(
+            let result = await Color.create(
                 {
                     backgroundColor: req.body.backgroundColor, 
                     caseColor: req.body.caseColor, 
@@ -22,7 +22,8 @@ module.exports = {
                     userId: req.user.id
                 })
             console.log('Color has been added!')
-            res.redirect('/saved-colors')
+            res.send({ result })
+            // res.redirect('/saved-colors')
         }catch(err){
             console.log(err)
         }
