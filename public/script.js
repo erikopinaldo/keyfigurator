@@ -1,3 +1,84 @@
+// Form init
+
+let form;
+
+function findElements() {
+    form = document.querySelector('form');
+}
+
+function onSuccess(data) {
+    console.log(data.result);
+
+    let ul = document.querySelector('ul')
+    let li = document.createElement('li')
+
+    li.setAttribute('class', 'saved-color')
+    li.setAttribute('data-id', data.result._id)
+
+    li.innerHTML = `
+        <h4>${data.result.colorName}</h4>
+                            <section>
+                              <span id="bg-color">${data.result.backgroundColor}</span>
+                              <span id="case-color">${data.result.caseColor}</span>
+                              <span id="keys-color">${data.result.keysColor}</span>
+                              <span><button type="button" class="deleteBtn">Delete</button></span>
+                            </section>
+    `
+    ul.appendChild(li)
+
+    li.addEventListener('click', selectColor)
+    li.childNodes[3].childNodes[7].childNodes[0].addEventListener('click', deleteColor)
+    
+    document.getElementsByClassName('color-picker-name').colorName.value = ''
+}
+
+function onError(data) {
+    console.error(data);
+}
+
+function setOptions(currentForm) {
+    let formBackgroundColor = currentForm.childNodes[1].childNodes[3].value
+    let formCaseColor = currentForm.childNodes[3].childNodes[3].value
+    let formKeysColor = currentForm.childNodes[5].childNodes[3].value
+    let formName = currentForm.childNodes[7].childNodes[3].value
+
+    return {
+        method: 'post',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+            'backgroundColor': formBackgroundColor,
+            'caseColor': formCaseColor,
+            'keysColor': formKeysColor,
+            'colorName': formName
+        })
+    };
+}
+
+function sendForm(currentForm) {
+    return fetch(currentForm.action, setOptions(currentForm));
+}
+
+function onSubmit(event) {
+    event.preventDefault();
+    const { currentTarget } = event;
+    sendForm(currentTarget)
+        .then(response => response.json())
+        .then(data => onSuccess(data, currentTarget))
+        .catch(onError);
+}
+
+function subscribe() {
+    form.addEventListener('submit', onSubmit);
+}
+
+function init() {
+    findElements();
+    subscribe();
+}
+
+init();
+
+// Event listeners
 const savedColor = document.querySelectorAll('.saved-color')
 const deleteBtn = document.querySelectorAll('.deleteBtn')
 
