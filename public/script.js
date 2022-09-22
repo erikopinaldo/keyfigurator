@@ -35,7 +35,6 @@ function onError(data) {
 }
 
 function setOptions(currentForm) {
-    console.log(currentForm)
     let formBackgroundColor = currentForm.childNodes[1].childNodes[3].value
     let formCaseColor = currentForm.childNodes[3].childNodes[3].value
     let formKeysColor = currentForm.childNodes[5].childNodes[3].value
@@ -54,15 +53,12 @@ function setOptions(currentForm) {
 }
 
 function sendForm(currentForm) {
-    console.log(currentForm.action)
-    console.log(setOptions(currentForm))
     return fetch(currentForm.action, setOptions(currentForm));
 }
 
 function onSubmit(event) {
     event.preventDefault();
     const { currentTarget } = event;
-    console.log(currentTarget)
     sendForm(currentTarget)
         .then(response => response.json())
         .then(data => onSuccess(data, currentTarget))
