@@ -6,10 +6,6 @@ function findElements() {
     form = document.querySelector('form');
 }
 
-function showMessage(data) {
-    alert(data.message);
-}
-
 function onSuccess(data) {
     console.log(data.result);
 
