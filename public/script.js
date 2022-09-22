@@ -11,7 +11,7 @@ function showMessage(data) {
 }
 
 function onSuccess(data) {
-    showMessage(data);
+    console.log('onSuccess called!');
 }
 
 function onError(data) {
@@ -59,14 +59,17 @@ function setOptions(currentForm) {
 }
 
 function sendForm(currentForm) {
+    console.log(currentForm.action)
+    console.log(setOptions(currentForm))
     return fetch(currentForm.action, setOptions(currentForm));
 }
 
 function onSubmit(event) {
     event.preventDefault();
     const { currentTarget } = event;
+    console.log(currentTarget)
     sendForm(currentTarget)
-        .then(response => response.json())
+        .then(response => console.log(response))
         .then(data => onSuccess(data, currentTarget))
         .catch(onError);
 }
