@@ -11,7 +11,31 @@ function showMessage(data) {
 }
 
 function onSuccess(data) {
-    console.log(data);
+    console.log(data.result);
+
+    let ul = document.querySelector('ul')
+    let li = document.createElement('li')
+
+    li.setAttribute('class', 'saved-color')
+    li.setAttribute('data-id', data.result._id)
+
+    li.innerHTML = `
+        <h4>${data.result.colorName}</h4>
+                            <section>
+                              <span id="bg-color">${data.result.backgroundColor}</span>
+                              <span id="case-color">${data.result.caseColor}</span>
+                              <span id="keys-color">${data.result.keysColor}</span>
+                              <span><button type="button" class="deleteBtn">Delete</button></span>
+                            </section>
+    `
+    ul.appendChild(li)
+
+    li.addEventListener('click', selectColor)
+    
+    const deleteBtn = document.querySelectorAll('.deleteBtn')
+    Array.from(deleteBtn).forEach((element) => {
+        element.addEventListener('click', deleteColor)
+    })
 }
 
 function onError(data) {
