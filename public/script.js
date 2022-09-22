@@ -18,27 +18,6 @@ function onError(data) {
     console.error(data);
 }
 
-function collectData(currentForm) {
-    // console.log(currentForm)
-    // console.log(currentForm.childNodes[5].childNodes[3].value)
-    // console.log(currentForm.childNodes[1].childNodes[3].value)
-    
-    let formBackgroundColor = currentForm.childNodes[1].childNodes[3].value
-    let formCaseColor = currentForm.childNodes[3].childNodes[3].value
-    let formKeysColor = currentForm.childNodes[5].childNodes[3].value
-
-    let colorObject = {
-        backgroundColor: formBackgroundColor,
-        caseColor: formCaseColor,
-        keysColor: formKeysColor
-    }
-
-    // let formData = new FormData(currentForm)
-    // console.log(formData)
-    // return new FormData(currentForm);
-    return colorObject
-}
-
 function setOptions(currentForm) {
     console.log(currentForm)
     let formBackgroundColor = currentForm.childNodes[1].childNodes[3].value
