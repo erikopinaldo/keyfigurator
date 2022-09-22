@@ -76,6 +76,7 @@ function init() {
 
 init();
 
+// Event listeners
 const savedColor = document.querySelectorAll('.saved-color')
 const deleteBtn = document.querySelectorAll('.deleteBtn')
 
