@@ -37,6 +37,7 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
+// Used to display temporary error messages on FE
 app.use(flash())
 
 app.use('/', colorsRoutes)
