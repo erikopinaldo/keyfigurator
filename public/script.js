@@ -40,8 +40,8 @@ function setOptions(currentForm) {
     let formBackgroundColor = currentForm.childNodes[1].childNodes[3].value
     let formCaseColor = currentForm.childNodes[3].childNodes[3].value
     let formKeysColor = currentForm.childNodes[5].childNodes[3].value
-    console.log(currentForm.childNodes[9].childNodes[1].childNodes[1].value)
-    let formName = currentForm.childNodes[9].childNodes[1].childNodes[1].value
+    console.log(currentForm.childNodes[7].childNodes[1].childNodes[1].value)
+    let formName = currentForm.childNodes[7].childNodes[1].childNodes[1].value
         // currentForm.childNodes[7].childNodes[3].value
 
     return {
