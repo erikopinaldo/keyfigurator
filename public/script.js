@@ -3,7 +3,7 @@
 let form;
 
 function findElements() {
-    form = document.querySelector('form');
+    form = document.querySelector('.save-color-form');
 }
 
 function onSuccess(data) {
