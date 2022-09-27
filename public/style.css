@@ -16,7 +16,7 @@ body {
   margin: 0 1.5% 0 1.5%;
 } */
 
-nav section {
+/* nav section {
   margin: 30px;
   display: flex;
   align-items: center;
@@ -39,7 +39,7 @@ nav section h1 {
 
 .login-signup-links li a {
   text-decoration: none;
-}
+} */
 
 span {
   display: block;
