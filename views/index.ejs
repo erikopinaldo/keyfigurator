@@ -11,9 +11,10 @@
       </ul>
     </div>
   </div>
-  <div class="container">
-    <div class="content">
-      <div class="keyboard-container">
+  <div class="hero min-h-screen bg-base-200">
+    <div class="hero-content flex-col lg:flex-row">
+      <!-- <img src="https://placeimg.com/260/400/arch" class="max-w-sm rounded-lg shadow-2xl" /> -->
+      <div class="keyboard-container rounded-lg shadow-2xl">
         <div class="keyboard">
           <div class="row numbers">
             <div class="key key__esc">
@@ -59,7 +60,7 @@
               <i data-feather="delete"></i>
             </div>
           </div>
-              
+  
           <div class="row alphas">
             <div class="key key__oneandhalf">
               <i data-feather="log-in"></i>
@@ -104,7 +105,7 @@
               | <span> \
             </div>
           </div>
-              
+  
           <div class="row alphas">
             <div class="key key__caps">
               <i data-feather="meh"></i>
@@ -146,7 +147,7 @@
               <i data-feather="corner-down-left"></i>
             </div>
           </div>
-          
+  
           <div class="row alphas">
             <div class="key key__shift-left">
               <i data-feather="arrow-up-circle"></i>
@@ -191,7 +192,7 @@
               <i data-feather="trash-2"></i>
             </div>
           </div>
-              
+  
           <div class="row bottom">
             <div class="key key__bottom-funct">
               ^
@@ -224,21 +225,21 @@
       </div>
       <div class="color-picker">
         <div>
-            <h2>Configurator</h2>
-            <form method="post" action="/saveColor">
-                <div>
-                  <span>Background</span>
-                  <input type="text" value="#d0d0d0" class="color-picker-bg" name="backgroundColor"/>
-                </div>
-                <div>
-                  <span>Case</span>
-                  <input type="text" value="#46465E" class="color-picker-case" name="caseColor" />
-                </div>
-                <div>
-                  <span>Keys</span>
-                  <input type="text" value="#FFFFFF" class="color-picker-keys" name="keysColor" />
-                </div>
-              </form>
+          <h2>Configurator</h2>
+          <form method="post" action="/saved-colors/saveColor">
+            <div>
+              <span>Background</span>
+              <input type="text" value="#d0d0d0" class="color-picker-bg" name="backgroundColor" />
+            </div>
+            <div>
+              <span>Case</span>
+              <input type="text" value="#46465E" class="color-picker-case" name="caseColor" />
+            </div>
+            <div>
+              <span>Keys</span>
+              <input type="text" value="#FFFFFF" class="color-picker-keys" name="keysColor" />
+            </div>
+          </form>
         </div>
       </div>
     </div>
