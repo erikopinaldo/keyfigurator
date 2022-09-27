@@ -41,6 +41,10 @@ nav section h1 {
   text-decoration: none;
 } */
 
+.btn-login {
+  margin-top: 5%;
+}
+
 span {
   display: block;
   margin-top: -5px;
