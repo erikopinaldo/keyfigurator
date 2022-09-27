@@ -236,15 +236,18 @@
         <form class="save-color-form" method="post" action="/saved-colors/saveColor">
           <div>
             <span>Background</span>
-            <input type="text" value="#d0d0d0" class="color-picker-bg" name="backgroundColor" />
+            <input type="text" value="#d0d0d0" class="input input-bordered w-full max-w-xs color-picker-bg" name="backgroundColor"/>
+            <!-- <input type="text" value="#d0d0d0" class="color-picker-bg" name="backgroundColor" /> -->
           </div>
           <div>
             <span>Case</span>
-            <input type="text" value="#46465E" class="color-picker-case" name="caseColor" />
+            <input type="text" value="#46465E" class="input input-bordered w-full max-w-xs color-picker-case"
+              name="backgroundColor" name="caseColor"/>
           </div>
           <div>
             <span>Keys</span>
-            <input type="text" value="#FFFFFF" class="color-picker-keys" name="keysColor" />
+            <input type="text" value="#FFFFFF" class="input input-bordered w-full max-w-xs color-picker-keys" name="keysColor"
+              name="caseColor" />
           </div>
           <!-- <div class="submitColorName">
                       <span>Color combination name</span>
