@@ -9,7 +9,7 @@ function findElements() {
 function onSuccess(data) {
     console.log(data.result);
 
-    let ul = document.querySelector('ul')
+    let ul = document.querySelector('.saved-colors')
     let li = document.createElement('li')
 
     li.setAttribute('class', 'saved-color')
@@ -21,7 +21,7 @@ function onSuccess(data) {
                               <span id="bg-color">${data.result.backgroundColor}</span>
                               <span id="case-color">${data.result.caseColor}</span>
                               <span id="keys-color">${data.result.keysColor}</span>
-                              <span><button type="button" class="deleteBtn">Delete</button></span>
+                              <span><button type="button" class="deleteBtn btn btn-secondary">Delete</button></span>
                             </section>
     `
     ul.appendChild(li)
@@ -40,7 +40,9 @@ function setOptions(currentForm) {
     let formBackgroundColor = currentForm.childNodes[1].childNodes[3].value
     let formCaseColor = currentForm.childNodes[3].childNodes[3].value
     let formKeysColor = currentForm.childNodes[5].childNodes[3].value
-    let formName = currentForm.childNodes[7].childNodes[3].value
+    console.log(currentForm.childNodes[9].childNodes[1].childNodes[1].value)
+    let formName = currentForm.childNodes[9].childNodes[1].childNodes[1].value
+        // currentForm.childNodes[7].childNodes[3].value
 
     return {
         method: 'post',
