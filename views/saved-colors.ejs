@@ -1,13 +1,5 @@
 <%- include('partials/header') -%>
 <body>
-  <!-- <nav>
-    <section>
-      <h1>keyfigurator</h1>
-      <section>
-        <a href="/logout"> Log out</a>
-      </section>
-    </section>
-  </nav> -->
   <div class="navbar bg-base-100">
     <div class="flex-1">
       <a class="btn btn-ghost normal-case text-xl">keyfigurator</a>
@@ -20,8 +12,7 @@
   </div>
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row">
-    <!-- <img src="https://placeimg.com/260/400/arch" class="max-w-sm rounded-lg shadow-2xl" /> -->
-    <div class="keyboard-container rounded-lg shadow-2xl">
+      <div class="keyboard-container rounded-lg shadow-2xl">
       <div class="keyboard">
         <div class="row numbers">
           <div class="key key__esc">
@@ -229,8 +220,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="color-picker">
+      </div>
+      <div class="color-picker">
       <div>
         <h2>Configurator</h2>
         <form class="save-color-form" method="post" action="/saved-colors/saveColor">
@@ -289,273 +280,10 @@
           </ul>
         </div>
       </div>
-    </div>
+      </div>
     </div>
   </div>
-<!-- 
-  <div class="container">
-    <div class="content">
-      <div class="keyboard-container">
-        <div class="keyboard">
-          <div class="row numbers">
-            <div class="key key__esc">
-              <i data-feather="x"></i>
-            </div>
-            <div class="key key__symbols">
-              ! <span> 1
-            </div>
-            <div class="key key__symbols">
-              @ <span> 2
-            </div>
-            <div class="key key__symbols">
-              # <span> 3
-            </div>
-            <div class="key key__symbols">
-              $ <span> 4
-            </div>
-            <div class="key key__symbols">
-              % <span> 5
-            </div>
-            <div class="key key__symbols">
-              ^ <span> 6
-            </div>
-            <div class="key key__symbols">
-              & <span> 7
-            </div>
-            <div class="key key__symbols">
-              * <span> 8
-            </div>
-            <div class="key key__symbols">
-              ( <span> 9
-            </div>
-            <div class="key key__symbols">
-              ) <span> 0
-            </div>
-            <div class="key key__symbols">
-              _ <span> -
-            </div>
-            <div class="key key__symbols">
-              + <span> =
-            </div>
-            <div class="key key__delete key__icon">
-              <i data-feather="delete"></i>
-            </div>
-          </div>
-              
-          <div class="row alphas">
-            <div class="key key__oneandhalf">
-              <i data-feather="log-in"></i>
-            </div>
-            <div class="key">
-              Q
-            </div>
-            <div class="key">
-              W
-            </div>
-            <div class="key">
-              E
-            </div>
-            <div class="key">
-              R
-            </div>
-            <div class="key">
-              T
-            </div>
-            <div class="key">
-              Y
-            </div>
-            <div class="key">
-              U
-            </div>
-            <div class="key">
-              I
-            </div>
-            <div class="key">
-              O
-            </div>
-            <div class="key">
-              P
-            </div>
-            <div class="key key__symbols">
-              { <span> [
-            </div>
-            <div class="key key__symbols">
-              } <span> ]
-            </div>
-            <div class="key key__symbols key__oneandhalf">
-              | <span> \
-            </div>
-          </div>
-              
-          <div class="row alphas">
-            <div class="key key__caps">
-              <i data-feather="meh"></i>
-            </div>
-            <div class="key">
-              A
-            </div>
-            <div class="key">
-              S
-            </div>
-            <div class="key">
-              D
-            </div>
-            <div class="key">
-              F
-            </div>
-            <div class="key">
-              G
-            </div>
-            <div class="key">
-              H
-            </div>
-            <div class="key">
-              J
-            </div>
-            <div class="key">
-              K
-            </div>
-            <div class="key">
-              L
-            </div>
-            <div class="key key__symbols">
-              : <span> ;
-            </div>
-            <div class="key key__symbols">
-              " <span> '
-            </div>
-            <div class="key key__enter">
-              <i data-feather="corner-down-left"></i>
-            </div>
-          </div>
-          
-          <div class="row alphas">
-            <div class="key key__shift-left">
-              <i data-feather="arrow-up-circle"></i>
-            </div>
-            <div class="key">
-              Z
-            </div>
-            <div class="key">
-              X
-            </div>
-            <div class="key">
-              C
-            </div>
-            <div class="key">
-              V
-            </div>
-            <div class="key">
-              B
-            </div>
-            <div class="key">
-              N
-            </div>
-            <div class="key">
-              M
-            </div>
-            <div class="key key__symbols">
-              > <span> .
-            </div>
-            <div class="key key__symbols">
-              < <span> .
-            </div>
-            <div class="key key__symbols">
-              ? <span> /
-            </div>
-            <div class="key">
-              <i data-feather="arrow-up-circle"></i>
-            </div>
-            <div class="key key__arrow">
-              <i data-feather="arrow-up"></i>
-            </div>
-            <div class="key">
-              <i data-feather="trash-2"></i>
-            </div>
-          </div>
-              
-          <div class="row bottom">
-            <div class="key key__bottom-funct">
-              ^
-            </div>
-            <div class="key key__bottom-funct">
-              <i data-feather="activity"></i>
-            </div>
-            <div class="key key__bottom-funct">
-              <i data-feather="command"></i>
-            </div>
-            <div class="key key__spacebar">
-            </div>
-            <div class="key">
-              <i data-feather="command"></i>
-            </div>
-            <div class="key">
-              <i data-feather="activity"></i>
-            </div>
-            <div class="key key__arrow">
-              <i data-feather="arrow-left"></i>
-            </div>
-            <div class="key key__arrow">
-              <i data-feather="arrow-down"></i>
-            </div>
-            <div class="key key__arrow">
-              <i data-feather="arrow-right"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="color-picker">
-        <div>
-            <h2>Configurator</h2>
-            <form method="post" action="/saved-colors/saveColor">
-                <div>
-                  <span>Background</span>
-                  <input type="text" value="#d0d0d0" class="color-picker-bg" name="backgroundColor"/>
-                </div>
-                <div>
-                  <span>Case</span>
-                  <input type="text" value="#46465E" class="color-picker-case" name="caseColor" />
-                </div>
-                <div>
-                  <span>Keys</span>
-                  <input type="text" value="#FFFFFF" class="color-picker-keys" name="keysColor" />
-                </div> -->
-                <!-- <div class="submitColorName">
-                  <span>Color combination name</span>
-                  <input type="text" placeholder="Enter name here" class="color-picker-name" name="colorName" />
-                  <button type="submit" class="btn btn-primary">Save color</button>
-                </div> -->
-                <!-- <div class="form-control">
-                  <div class="input-group">
-                    <input type="text" placeholder="Enter color name" class="input input-bordered color-picker-name" name="colorName"/>
-                    <button type="submit" class="btn">
-                      Save
-                    </button>
-                  </div>
-                </div>
-              </form>
-              <div>
-                  <h2>Saved colors</h2>
-                  <ul class="saved-colors">
-                      <% for(var i = 0; i < colors.length; i++) {%>
-                          <li class="saved-color" data-id="<%=colors[i]._id%>">
-                            <h4><%= colors[i].colorName %></h4>
-                            <section>
-                              <span id="bg-color"><%= colors[i].backgroundColor %></span>
-                              <span id="case-color"><%= colors[i].caseColor %></span>
-                              <span id="keys-color"><%= colors[i].keysColor %></span>
-                              <span><button type="button" class="deleteBtn btn btn-secondary">Delete</button></span>
-                            </section>
-                          </li>
-                      <% } %>
-                  </ul>
-              </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
 </body>
-<!-- partial -->
 <script  src="./script.js"></script>
 <script src="./color-picker.min.js"></script>
 <script>
