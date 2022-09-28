@@ -86,8 +86,6 @@ const deleteBtn = document.querySelectorAll('.deleteBtn')
 
 console.log(document.querySelectorAll('.deleteBtn'))
 
-// feather.replace();
-
 Array.from(savedColor).forEach((element) => {
     element.addEventListener('click', selectColor)
 })
