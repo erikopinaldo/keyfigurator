@@ -70,7 +70,9 @@ function onSubmit(event) {
 }
 
 function subscribe() {
-    form.addEventListener('submit', onSubmit);
+    if (form !== null) {
+        form.addEventListener('submit', onSubmit);
+    } 
 }
 
 function init() {
