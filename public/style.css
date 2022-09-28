@@ -50,7 +50,7 @@ span {
   margin-top: -5px;
 }
 
-.container {
+/* .container {
   height: 80vh;
   width: auto;
   margin-left: auto;
@@ -67,7 +67,7 @@ span {
 
 .content > * {
   margin: 50px;
-}
+} */
 
 .color-picker {
   display: flex;
@@ -214,6 +214,6 @@ span {
   background: var(--green);
 }
 
-.feather {
+/* .feather {
   margin-top: 10px;
-}
+} */
