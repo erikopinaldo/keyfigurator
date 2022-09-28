@@ -86,13 +86,17 @@ const deleteBtn = document.querySelectorAll('.deleteBtn')
 
 console.log(document.querySelectorAll('.deleteBtn'))
 
-Array.from(savedColor).forEach((element) => {
-    element.addEventListener('click', selectColor)
-})
+if (savedColor !== null) {
+    Array.from(savedColor).forEach((element) => {
+        element.addEventListener('click', selectColor)
+    })
+}
 
-Array.from(deleteBtn).forEach((element)=>{
-    element.addEventListener('click', deleteColor)
-})
+if (deleteBtn !== null) {
+    Array.from(deleteBtn).forEach((element) => {
+        element.addEventListener('click', deleteColor)
+    })
+}
 
 function selectColor(selection) {
     let bgColor = this.childNodes[3].childNodes[1].innerText
