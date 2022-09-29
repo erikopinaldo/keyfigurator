@@ -129,6 +129,10 @@ span {
   padding: 0;
 }
 
+.saved-color {
+  margin: 5% 0 5% 0;
+}
+
 .saved-color > section {
   display: flex;
   justify-content: space-around;
