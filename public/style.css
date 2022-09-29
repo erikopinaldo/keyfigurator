@@ -148,6 +148,7 @@ span {
 }
 
 .keyboard {
+  box-sizing: content-box;
   width: 780px;
   height: 262px;
   margin: 80px 50px 80px 50px;
