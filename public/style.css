@@ -71,6 +71,8 @@ span {
 
 .color-picker {
   display: flex;
+  margin-left: 2%;
+  padding: 1%;
   width: 400px;
   align-items: center;
   flex-grow: 5;
