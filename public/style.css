@@ -10,6 +10,10 @@ body {
   font-weight: bold;
 }
 
+.site-name {
+  font-size: 1.5em;
+}
+
 span {
   display: block;
   margin-top: -5px;
