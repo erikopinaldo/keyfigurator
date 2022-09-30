@@ -258,15 +258,14 @@
                     <%= colors[i].colorName %>
                   </span>
                   <section>
-                    <span id="bg-color">
-                      <%= colors[i].backgroundColor %>
-                    </span>
-                    <span id="case-color">
+                    <div class="badge badge-lg" style="background-color:<%= colors[i].backgroundColor %>"><%= colors[i].backgroundColor %>
+                    </div>
+                    <div class="badge badge-lg" style="background-color:<%= colors[i].caseColor %>">
                       <%= colors[i].caseColor %>
-                    </span>
-                    <span id="keys-color">
+                    </div>
+                    <div class="badge badge-lg" style="background-color:<%= colors[i].keysColor %>">
                       <%= colors[i].keysColor %>
-                    </span>
+                    </div>
                     <span><button type="button" class="deleteBtn btn btn-secondary">Delete</button></span>
                   </section>
                 </li>
