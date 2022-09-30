@@ -7,7 +7,7 @@
     <div class="flex-none">
       <ul class="menu menu-horizontal p-0">
         <label for="my-modal-3" class="btn modal-button">Log in</label>
-        <li><a href="/signup">Sign up</a></li>
+        <label for="my-modal-4" class="btn btn-ghost modal-button">Sign up</label>
       </ul>
     </div>
   </div>
@@ -17,20 +17,48 @@
       <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
       <form action="/login" method="POST">
         <div class="form-control">
-            <label class="label">
-              <span class="label-text">Email</span>
-            </label>
-            <input type="email" name="email" placeholder="email" class="input input-bordered" />
-          </div>
-          <div class="form-control">
-            <label class="label">
-              <span class="label-text">Password</span>
-            </label>
-            <input type="password" name="password" placeholder="password" class="input input-bordered" />
-          </div>
-          <div class="form-control mt-6">
-            <button type="submit" class="btn btn-primary btn-login">Login</button>
-          </div>
+          <label class="label">
+            <span class="label-text">Email</span>
+          </label>
+          <input type="email" name="email" placeholder="email" class="input input-bordered" />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Password</span>
+          </label>
+          <input type="password" name="password" placeholder="password" class="input input-bordered" />
+        </div>
+        <div class="form-control mt-6">
+          <button type="submit" class="btn btn-primary btn-login">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <input type="checkbox" id="my-modal-4" class="modal-toggle" />
+  <div class="modal">
+    <div class="modal-box relative">
+      <label for="my-modal-4" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+      <form action="/signup" method="POST">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Email</span>
+          </label>
+          <input type="email" name="email" placeholder="email" class="input input-bordered" />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Password</span>
+          </label>
+          <input type="password" name="password" placeholder="password" class="input input-bordered" />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Confirm Password</span>
+          </label>
+          <input type="password" name="confirmPassword" placeholder="Confirm Password" class="input input-bordered" />
+        </div>
+        <div class="form-control mt-6">
+          <button type="submit" class="btn btn-primary btn-login">Login</button>
         </div>
       </form>
     </div>
