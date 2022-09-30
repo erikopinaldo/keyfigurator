@@ -46,6 +46,11 @@ span {
   margin-top: -5px;
 }
 
+/* Remove this when you remove the 2d keyboard. This is used to reverse the span margin that is being used for the key legends, that also inadvertently affects the login/signup modal spans */
+label > span {
+  margin-top: 0;
+}
+
 /* .container {
   height: 80vh;
   width: auto;
