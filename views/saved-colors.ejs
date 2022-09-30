@@ -253,10 +253,10 @@
             <h2>Saved colors</h2>
             <ul class="saved-colors">
               <% for(var i=0; i < colors.length; i++) {%>
-                <li class="saved-color" data-id="<%=colors[i]._id%>">
-                  <h4>
+                <li class="saved-color prose" data-id="<%=colors[i]._id%>">
+                  <span>
                     <%= colors[i].colorName %>
-                  </h4>
+                  </span>
                   <section>
                     <span id="bg-color">
                       <%= colors[i].backgroundColor %>
