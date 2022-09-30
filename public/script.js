@@ -101,9 +101,9 @@ if (deleteBtn !== null) {
 }
 
 function selectColor(selection) {
-    let bgColor = this.childNodes[3].childNodes[1].innerText
-    let caseColor = this.childNodes[3].childNodes[3].innerText
-    let keysColor = this.childNodes[3].childNodes[5].innerText
+    let bgColor = this.childNodes[3].childNodes[1].style.backgroundColor
+    let caseColor = this.childNodes[3].childNodes[3].style.backgroundColor
+    let keysColor = this.childNodes[3].childNodes[5].style.backgroundColor
     let keys = document.querySelectorAll('.key')
 
     document.querySelector('.keyboard-container').style.backgroundColor = bgColor
