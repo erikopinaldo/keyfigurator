@@ -2,14 +2,14 @@
 <body>
   <div class="navbar bg-base-200">
     <div class="flex-1">
-      <a href="/" class="btn btn-ghost normal-case text-xl prose">
-        <h1 class="site-name">keyfigurator</h1>
+      <a href="/" class="btn btn-lg lg:btn-md btn-ghost normal-case">
+        <h1 class="text-5xl lg:text-3xl font-bold">keyfigurator</h1>
       </a>
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal p-0">
-        <label for="my-modal-3" class="btn modal-button">Log in</label>
-        <label for="my-modal-4" class="btn btn-ghost modal-button">Sign up</label>
+        <label for="my-modal-3" class="btn btn-lg lg:btn-md modal-button">Log in</label>
+        <label for="my-modal-4" class="btn btn-lg lg:btn-md btn-ghost modal-button">Sign up</label>
       </ul>
     </div>
   </div>
@@ -276,24 +276,36 @@
           </div>
         </div>
       </div>
-      <div class="color-picker">
-        <div class="prose">
-          <h2>Configurator</h2>
-          <form method="post" action="/saved-colors/saveColor">
+      <div class="color-picker flex items-center">
+        <div class="color-picker-content container mx-auto">
+          <h2 class="text-5xl lg:text-3xl">Configurator</h2>
+          <form class="save-color-form" method="post" action="/saved-colors/saveColor">
             <div>
-              <span>Background</span>
-              <input type="text" value="#d0d0d0" class="input input-bordered w-full max-w-xs color-picker-bg"
-                name="backgroundColor" />
+              <h3 class="text-3xl lg:text-xl">Background</h3>
+              <input type="text" value="#d0d0d0"
+                class="input input-lg lg:input-md input-bordered w-full sm:max-w-full color-picker-bg" name="backgroundColor" />
             </div>
             <div>
-              <span>Case</span>
-              <input type="text" value="#46465E" class="input input-bordered w-full max-w-xs color-picker-case"
-                name="backgroundColor" name="caseColor" />
-            </div>
-            <div>
-              <span>Keys</span>
-              <input type="text" value="#FFFFFF" class="input input-bordered w-full max-w-xs color-picker-keys" name="keysColor"
+              <h3 class="text-3xl lg:text-xl">Case</h3>
+              <input type="text" value="#46465E"
+                class="input input-lg lg:input-md input-bordered w-full sm:max-w-full color-picker-case" name="backgroundColor"
                 name="caseColor" />
+            </div>
+            <div>
+              <h3 class="text-3xl lg:text-xl">Keys</h3>
+              <input type="text" value="#FFFFFF"
+                class="input input-lg lg:input-md input-bordered w-full sm:max-w-full color-picker-keys" name="keysColor"
+                name="caseColor" />
+            </div>
+            <div class="form-control">
+              <div class="input-group in-group-lg">
+                <input type="text" placeholder="Enter color name"
+                  class="input input-lg lg:input-md input-bordered w-full sm:max-w-full lg:max-w-xs color-picker-name"
+                  name="colorName" />
+                <button type="submit" class="btn btn-lg lg:btn-md">
+                  Save
+                </button>
+              </div>
             </div>
           </form>
         </div>
