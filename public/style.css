@@ -33,12 +33,6 @@ label > span {
   .color-picker form>* {
     margin-bottom: 3rem;
   }
-
-  input[type="text"], 
-  input[type="email"],
-  input[type="password"] {
-    font-size: 1rem;
-  }
 }
 
 @media (min-width: 1024px) {
