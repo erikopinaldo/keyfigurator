@@ -33,6 +33,12 @@ label > span {
   .color-picker form>* {
     margin-bottom: 3rem;
   }
+
+  input[type="text"], 
+  input[type="email"],
+  input[type="password"] {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -75,10 +81,6 @@ h2 {
 .saved-colors {
   list-style-type: none;
   padding: 0;
-}
-
-input {
-  touch-action: manipulation;
 }
 
 .keyboard-container {
