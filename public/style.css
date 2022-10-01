@@ -6,39 +6,12 @@
 }
 
 body {
-  background-color: #FFFFFF;
-  /* margin-top: 50px; */
   font-family: 'Nunito', sans-serif;
   font-weight: bold;
 }
 
-header {
-  margin: 0 1.5% 0 1.5%;
-}
-
-nav section {
-  margin: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-nav section h1 {
-  font-size: 30px;
-}
-
-.login-signup-links {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-}
-
-.login-signup-links li {
-  margin-right: 10%;
-}
-
-.login-signup-links li a {
-  text-decoration: none;
+.site-name {
+  /* font-size: 1.5rem; */
 }
 
 span {
@@ -46,94 +19,63 @@ span {
   margin-top: -5px;
 }
 
-.container {
-  height: 80vh;
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Remove this when you remove the 2d keyboard. This is used to reverse the span margin that is being used for the key legends, that also inadvertently affects the login/signup modal spans */
+label > span {
+  margin-top: 0;
 }
 
-.content {
-  display: flex;
-  align-items: center;
+@media (min-width: 0px) {
+  .color-picker {
+    margin-top: 2.5rem;
+    padding: 1%;
+    width: 100%;
+  }
+  .color-picker form>* {
+    margin-bottom: 3rem;
+  }
 }
 
-.content > * {
-  margin: 50px;
+@media (min-width: 1024px) {
+  .color-picker {
+    margin-top: 0;
+    width: 400px;
+  }
+
+  .color-picker-content {
+    height: 500px;
+    width: 50vh;
+    padding: 0 5% 0 5%;
+    overflow: auto;
+  }
+
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+
+  .color-picker form>* {
+    margin-bottom: 1.5rem;
+  }
 }
 
-.color-picker {
-  display: flex;
-  width: 350px;
-  align-items: center;
-  flex-grow: 5;
-}
-
-.color-picker > * {
-  height: 500px;
-  width: 50vh;
-  overflow: auto;
-}
-
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #d6dee1;
-  border-radius: 20px;
-  border: 6px solid transparent;
-  background-clip: content-box;
-}
-
-.color-picker input {
-  border: 0;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
-}
-
-.color-picker span {
-  color: black;
-}
-
-.color-picker form > * {
-  margin: 20px 0 20px 0;
-}
-
-.submitColorName {
-  margin: 20px;
-  background-color: #d0d0d0;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.submitColorName > *{
-  margin-bottom: 10px;
+h2 {
+  margin-bottom: 1.5rem;
 }
 
 .saved-colors {
   list-style-type: none;
   padding: 0;
 }
-
-.saved-color > section {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-/* .button {
-  border-style: none;
-  border-radius: 5px;
-  background-color: #d0d0d0;
-} */
 
 .keyboard-container {
   display: flex;
@@ -144,6 +86,7 @@ span {
 }
 
 .keyboard {
+  box-sizing: content-box;
   width: 780px;
   height: 262px;
   margin: 80px 50px 80px 50px;
@@ -208,8 +151,4 @@ span {
 
 .key__arrow {
   background: var(--green);
-}
-
-.feather {
-  margin-top: 10px;
 }

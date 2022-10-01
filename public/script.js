@@ -3,26 +3,31 @@
 let form;
 
 function findElements() {
-    form = document.querySelector('form');
+    form = document.querySelector('.save-color-form');
 }
 
 function onSuccess(data) {
     console.log(data.result);
 
-    let ul = document.querySelector('ul')
+    let ul = document.querySelector('.saved-colors')
     let li = document.createElement('li')
 
-    li.setAttribute('class', 'saved-color')
+    li.classList.add('saved-color', 'w-full')
     li.setAttribute('data-id', data.result._id)
 
     li.innerHTML = `
-        <h4>${data.result.colorName}</h4>
-                            <section>
-                              <span id="bg-color">${data.result.backgroundColor}</span>
-                              <span id="case-color">${data.result.caseColor}</span>
-                              <span id="keys-color">${data.result.keysColor}</span>
-                              <span><button type="button" class="deleteBtn">Delete</button></span>
-                            </section>
+        <h3 class="text-3xl lg:text-xl">
+            ${data.result.colorName}
+        </h3>
+        <div class="flex justify-between items-center">
+            <div class="badge badge-lg rounded-none" style="background-color:${data.result.backgroundColor}">
+            </div>
+            <div class="badge badge-lg rounded-none" style="background-color:${data.result.caseColor}">
+            </div>
+            <div class="badge badge-lg rounded-none" style="background-color:${data.result.keysColor}">
+            </div>
+            <span><button type="button" class="deleteBtn btn btn-secondary btn-lg lg:btn-md">Delete</button></span>
+        </div>
     `
     ul.appendChild(li)
 
@@ -40,7 +45,9 @@ function setOptions(currentForm) {
     let formBackgroundColor = currentForm.childNodes[1].childNodes[3].value
     let formCaseColor = currentForm.childNodes[3].childNodes[3].value
     let formKeysColor = currentForm.childNodes[5].childNodes[3].value
-    let formName = currentForm.childNodes[7].childNodes[3].value
+    console.log(currentForm.childNodes[7].childNodes[1].childNodes[1].value)
+    let formName = currentForm.childNodes[7].childNodes[1].childNodes[1].value
+        // currentForm.childNodes[7].childNodes[3].value
 
     return {
         method: 'post',
@@ -68,7 +75,9 @@ function onSubmit(event) {
 }
 
 function subscribe() {
-    form.addEventListener('submit', onSubmit);
+    if (form !== null) {
+        form.addEventListener('submit', onSubmit);
+    } 
 }
 
 function init() {
@@ -82,20 +91,24 @@ init();
 const savedColor = document.querySelectorAll('.saved-color')
 const deleteBtn = document.querySelectorAll('.deleteBtn')
 
-feather.replace();
+console.log(document.querySelectorAll('.deleteBtn'))
 
-Array.from(savedColor).forEach((element) => {
-    element.addEventListener('click', selectColor)
-})
+if (savedColor !== null) {
+    Array.from(savedColor).forEach((element) => {
+        element.addEventListener('click', selectColor)
+    })
+}
 
-Array.from(deleteBtn).forEach((element)=>{
-    element.addEventListener('click', deleteColor)
-})
+if (deleteBtn !== null) {
+    Array.from(deleteBtn).forEach((element) => {
+        element.addEventListener('click', deleteColor)
+    })
+}
 
 function selectColor(selection) {
-    let bgColor = this.childNodes[3].childNodes[1].innerText
-    let caseColor = this.childNodes[3].childNodes[3].innerText
-    let keysColor = this.childNodes[3].childNodes[5].innerText
+    let bgColor = this.childNodes[3].childNodes[1].style.backgroundColor
+    let caseColor = this.childNodes[3].childNodes[3].style.backgroundColor
+    let keysColor = this.childNodes[3].childNodes[5].style.backgroundColor
     let keys = document.querySelectorAll('.key')
 
     document.querySelector('.keyboard-container').style.backgroundColor = bgColor
