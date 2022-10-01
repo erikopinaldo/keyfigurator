@@ -11,7 +11,7 @@ body {
 }
 
 .site-name {
-  font-size: 1.5em;
+  /* font-size: 1.5rem; */
 }
 
 span {
@@ -26,37 +26,25 @@ label > span {
 
 @media (min-width: 0px) {
   .color-picker {
-    display: flex;
-    margin-left: 2%;
+    margin-top: 2.5rem;
     padding: 1%;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 5;
   }
-
-  .color-picker > * {
-    width: 100%;
-  }
-
-  .color-picker .prose > * {
-    width: 100%;
+  .color-picker form>* {
+    margin-bottom: 3rem;
   }
 }
 
 @media (min-width: 1024px) {
 .color-picker {
-    display: flex;
-    margin-left: 2%;
     padding: 1%;
     width: 400px;
-    align-items: center;
-    flex-grow: 5;
   }
 
-  .color-picker>* {
+  .color-picker-content {
     height: 500px;
     width: 50vh;
+    padding: 5%;
     overflow: auto;
   }
 
@@ -74,25 +62,19 @@ label > span {
     border: 6px solid transparent;
     background-clip: content-box;
   }
+
+  .color-picker form>* {
+    margin-bottom: 1.5rem;
+  }
 }
 
-.color-picker form > * {
-  margin: 20px 0 20px 0;
+h2 {
+  margin-bottom: 1.5rem;
 }
 
 .saved-colors {
   list-style-type: none;
   padding: 0;
-}
-
-.saved-color {
-  margin: 5% 0 5% 0;
-}
-
-.saved-color > section {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .keyboard-container {

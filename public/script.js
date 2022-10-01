@@ -12,22 +12,22 @@ function onSuccess(data) {
     let ul = document.querySelector('.saved-colors')
     let li = document.createElement('li')
 
-    li.classList.add('saved-color', 'prose')
+    li.classList.add('saved-color', 'w-full')
     li.setAttribute('data-id', data.result._id)
 
     li.innerHTML = `
-        <span>
+        <h3 class="text-3xl lg:text-xl">
             ${data.result.colorName}
-        </span>
-        <section>
+        </h3>
+        <div class="flex justify-between items-center">
             <div class="badge badge-lg rounded-none" style="background-color:${data.result.backgroundColor}">
             </div>
             <div class="badge badge-lg rounded-none" style="background-color:${data.result.caseColor}">
             </div>
             <div class="badge badge-lg rounded-none" style="background-color:${data.result.keysColor}">
             </div>
-            <span><button type="button" class="deleteBtn btn btn-secondary">Delete</button></span>
-        </section>
+            <span><button type="button" class="deleteBtn btn btn-secondary btn-lg lg:btn-md">Delete</button></span>
+        </div>
     `
     ul.appendChild(li)
 

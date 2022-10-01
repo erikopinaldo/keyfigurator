@@ -2,11 +2,11 @@
 <body>
   <div class="navbar bg-base-200">
     <div class="flex-1">
-      <a class="btn btn-ghost normal-case text-xl prose"><h1 class="site-name">keyfigurator</h1></a>
+      <a class="btn btn-lg lg:btn-md btn-ghost normal-case text-xl prose"><h1 class="site-name">keyfigurator</h1></a>
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal p-0">
-        <a class="btn btn-ghost" href="/logout">Log out</a>
+        <a class="btn btn-lg lg:btn-md btn-ghost" href="/logout">Log out</a>
       </ul>
     </div>
   </div>
@@ -221,51 +221,51 @@
           </div>
         </div>
       </div>
-      <div class="color-picker">
-        <div class="prose">
-          <h2>Configurator</h2>
+      <div class="color-picker flex items-center">
+        <div class="color-picker-content container mx-auto">
+          <h2 class="text-5xl lg:text-3xl">Configurator</h2>
           <form class="save-color-form" method="post" action="/saved-colors/saveColor">
             <div>
-              <span>Background</span>
-              <input type="text" value="#d0d0d0" class="input input-bordered w-full sm:max-w-full lg:max-w-xs color-picker-bg" name="backgroundColor"/>
+              <h3 class="text-3xl lg:text-xl">Background</h3>
+              <input type="text" value="#d0d0d0" class="input input-lg lg:input-md input-bordered w-full sm:max-w-full color-picker-bg" name="backgroundColor"/>
             </div>
             <div>
-              <span>Case</span>
-              <input type="text" value="#46465E" class="input input-bordered w-full sm:max-w-full lg:max-w-xs color-picker-case"
+              <h3 class="text-3xl lg:text-xl">Case</h3>
+              <input type="text" value="#46465E" class="input input-lg lg:input-md input-bordered w-full sm:max-w-full color-picker-case"
                 name="backgroundColor" name="caseColor"/>
             </div>
             <div>
-              <span>Keys</span>
-              <input type="text" value="#FFFFFF" class="input input-bordered w-full sm:max-w-full lg:max-w-xs color-picker-keys" name="keysColor"
+              <h3 class="text-3xl lg:text-xl">Keys</h3>
+              <input type="text" value="#FFFFFF" class="input input-lg lg:input-md input-bordered w-full sm:max-w-full color-picker-keys" name="keysColor"
                 name="caseColor" />
             </div>
             <div class="form-control">
               <div class="input-group in-group-lg">
-                <input type="text" placeholder="Enter color name" class="input input-bordered w-full sm:max-w-full lg:max-w-xs color-picker-name"
+                <input type="text" placeholder="Enter color name" class="input input-lg lg:input-md input-bordered w-full sm:max-w-full lg:max-w-xs color-picker-name"
                   name="colorName" />
-                <button type="submit" class="btn">
+                <button type="submit" class="btn btn-lg lg:btn-md">
                   Save
                 </button>
               </div>
             </div>
           </form>
-          <div>
-            <h2>Saved colors</h2>
+          <h2 class="text-5xl lg:text-3xl">Saved colors</h2>
+          <div>            
             <ul class="saved-colors">
               <% for(var i=0; i < colors.length; i++) {%>
-                <li class="saved-color prose" data-id="<%=colors[i]._id%>">
-                  <span>
+                <li class="saved-color w-full" data-id="<%=colors[i]._id%>">
+                  <h3 class="text-3xl lg:text-xl">
                     <%= colors[i].colorName %>
-                  </span>
-                  <section>
+                  </h3>
+                  <div class="flex justify-between items-center">
                     <div class="badge badge-lg rounded-none" style="background-color:<%= colors[i].backgroundColor %>">
                     </div>
                     <div class="badge badge-lg rounded-none" style="background-color:<%= colors[i].caseColor %>">
                     </div>
                     <div class="badge badge-lg rounded-none" style="background-color:<%= colors[i].keysColor %>">
                     </div>
-                    <span><button type="button" class="deleteBtn btn btn-secondary">Delete</button></span>
-                  </section>
+                    <span><button type="button" class="deleteBtn btn btn-secondary btn-lg lg:btn-md">Delete</button></span>
+                  </div>
                 </li>
                 <% } %>
             </ul>
