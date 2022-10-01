@@ -4,7 +4,8 @@ I enjoy collecting mechanical keyboards. When it comes to the outward appearance
 
 **Link to project:** https://keyfigurator.onrender.com/
 
-![keyfiguratordemo](https://user-images.githubusercontent.com/9390013/192000220-b68e75dc-3788-40de-b060-bfcff5f4fd0b.gif)
+![keyfiguratordemo](https://user-images.githubusercontent.com/9390013/193426175-bc5fd0f4-3c8b-4b8b-8f42-a6779f87cb5a.gif)
+
 
 ## How It's Made:
 
