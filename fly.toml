@@ -1,4 +1,4 @@
-# fly.toml file generated for keyfigurator on 2022-10-03T14:46:57-04:00
+# fly.toml file generated for keyfigurator on 2022-10-03T14:56:13-04:00
 
 app = "keyfigurator"
 kill_signal = "SIGINT"
