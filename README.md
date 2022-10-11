@@ -52,7 +52,7 @@ The other key tool that is helping serve customized views is authorization.
 
 ### Service Hosting
 
-This service is hosted on [Render](https://render.com/). I'm using their Free tier, so this means that the service goes to sleep after 15 minutes of inactivity. If you are the first user to interact with the service during this sleeping period, the page may take a few seconds to load.
+This service is hosted on [fly.io](https://fly.io/).
 
 ## Lessons Learned:
 
@@ -65,7 +65,6 @@ This service is hosted on [Render](https://render.com/). I'm using their Free ti
 
 * Learn three.js - I want to show a 3D keyboard model instead of the current 2D model.
 * Make the site look good. Its current state is more of an MVP. 
-* Explore other hosting services - Render's free plan (which I am using) currently spins down the bot after 15 minutes of inactivity. This means that any user interacting with or installing the bot for the first time after it's spun down will experience some lag as the bot spins back up.
 
 ## Acknowledgements
 
