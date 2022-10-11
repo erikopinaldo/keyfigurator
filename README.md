@@ -2,7 +2,7 @@
 
 I enjoy collecting mechanical keyboards. When it comes to the outward appearance of these keyboards, I have to choose a keyboard case color and the keycap colors/design. To make it easier to visualize what these color combinations might look like before I commit to buying them, I set out to create this visualizer tool.  This website features a 2D keyboard that you can modify. You can change the keyboard case and keycap color (you can also change the background canvas color).
 
-**Link to project:** https://keyfigurator.onrender.com/
+**Link to project:** https://keyfigurator.fly.dev/
 
 ![keyfiguratordemo](https://user-images.githubusercontent.com/9390013/193426175-bc5fd0f4-3c8b-4b8b-8f42-a6779f87cb5a.gif)
 
